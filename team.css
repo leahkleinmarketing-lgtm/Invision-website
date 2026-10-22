@@ -1,7 +1,7 @@
 .team-page{background:#fbf8f3;color:#493a33;overflow-x:clip}
 .team-page .site-header,.team-hero{background:#faf8f4}
 .team-page .site-header{z-index:auto}
-.team-page .site-header:has(.menu-toggle[aria-expanded="true"]){z-index:30}
+.team-page .site-nav{z-index:23}
 .team-page .brand{z-index:22}
 .team-page .eyebrow{color:#96764c;letter-spacing:.24em;font-size:.7rem;margin:0}
 .team-hero{position:relative;z-index:21;display:grid;place-items:center;min-height:370px;isolation:isolate;overflow:visible;text-align:center}
