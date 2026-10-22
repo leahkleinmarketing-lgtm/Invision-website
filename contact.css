@@ -1,5 +1,6 @@
 .contact-page{overflow-x:clip}
 .contact-page .site-header{z-index:auto}
+.contact-page .site-header:has(.menu-toggle[aria-expanded="true"]){z-index:30}
 .contact-page .brand{z-index:22}
 .contact-hero{position:relative;z-index:21;isolation:isolate;min-height:420px;display:flex;align-items:center;background:#faf8f4;overflow:visible}
 .contact-hero-inner{width:min(760px,calc(100% - 420px));margin:0 auto;padding:72px 20px 76px;text-align:center;position:relative;z-index:2}
