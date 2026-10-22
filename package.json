@@ -1,0 +1,8 @@
+{
+  "name": "invision-homepage",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "check": "node --check main.js && node --check reviews.js && node --check services.js && node --check contact.js && node --check blog-data.js && node --check blog.js && node --check blog-post.js && node --check server.js && node --test tests/contact-function.test.cjs tests/blog-function.test.cjs"
+  }
+}

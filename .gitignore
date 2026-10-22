@@ -1,0 +1,70 @@
+# Dependencies, builds, and local configuration
+node_modules/
+dist/
+.sanity/
+.wrangler/
+.dev.vars*
+.env*
+*.local
+
+# Local caches and browser state
+/.npm-cache/
+/.qa-chrome-profile/
+
+# Logs and machine-specific files
+*.log
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
+
+# Backups and local visual QA output (site images live in Assets/)
+/*.zip
+/*.png
+/*-check.json
+/local-preview-checks/
+/.git-data/
+
+# Design references and superseded, unoptimized image exports
+/Assets/*mockup*.png
+/Assets/*preview*.png
+/Assets/in-vision-homepage-with-reviews.png
+/Assets/ChatGPT Image*.png
+/Assets/Modern Clean Logo In Vision.png
+/Assets/about- a-look-that-feels-like-your.png
+/Assets/hero image about page.png
+/Assets/color-with-intention.png
+/Assets/color-brunette-salon.png
+/Assets/extensions-salon.png
+/Assets/floral-edge-bouquet.png
+/Assets/hero-curly-salon.png
+/Assets/icon -a-cut-that-fits.png
+/Assets/in-vision-logo-fitted.png
+/Assets/mens-cut-salon.png
+/Assets/more-possibilities.png
+/Assets/teen-perm-salon.png
+/Assets/treatment-salon.png
+/Assets/kenra
+/Assets/kenra.jpg
+/Assets/olaplex
+/Assets/olaplex.jpg
+/Assets/pureology
+/Assets/pureology.jpg
+/Assets/enhanced-photos/blonde-layers.png
+/Assets/enhanced-photos/brunette-waves.png
+/Assets/enhanced-photos/copper-layers.png
+/Assets/enhanced-photos/precision-bob.png
+/Assets/enhanced-photos/red-waves.png
+/Assets/team-page/CODEX-TEAM-PAGE-BRIEF.md
+/Assets/team-page/team-page-mockup.png
+/sanity-studio/
+
+# Private key material
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Sanity CLI initialized an independent Git repository inside Studio.
+# Its source should be committed by the parent repository after that
+# nested .git directory is moved out of the project.
+/studio/.git/

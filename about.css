@@ -1,0 +1,126 @@
+.about-page{background:#fbf8f3;color:#493a33;overflow-x:clip}
+.about-page .site-header{background:#faf8f4}
+.about-page .header-inner{height:100px}
+.about-page .brand{position:relative;flex:0 0 190px;width:190px;height:145px;align-self:flex-start;overflow:visible}
+.about-page .brand-logo{position:static;width:190px;height:auto;max-width:100%;object-fit:contain}
+.about-page .site-nav a.active{color:#896c45}
+.about-page .eyebrow{color:#765844;letter-spacing:.26em;font-size:.7rem}
+.about-page h1,.about-page h2,.about-page h3{color:#493a33}
+.about-page h2{font-size:clamp(2.35rem,4vw,3.55rem);letter-spacing:-.025em}
+.about-page h3{font-size:1.6rem}
+.about-page .button{background:#ab8955}
+.about-page .button:hover{background:#896c45}
+
+.about-hero{position:relative;display:grid;grid-template-columns:51% 49%;min-height:570px;background:#faf8f4;isolation:isolate}
+.about-hero-copy{align-self:center;padding:66px 60px 70px clamp(145px,16.1vw,235px);position:relative;z-index:2}
+.about-hero-copy h1{max-width:530px;margin:18px 0 23px;font-size:clamp(3.1rem,5.15vw,4.65rem);letter-spacing:-.038em;line-height:1.08}
+.about-hero-copy h1 em{font-weight:400}
+.about-hero-copy>p:not(.eyebrow){max-width:500px;color:#736b64;font-size:1.05rem;line-height:1.62}
+.about-hero-copy .button{margin-top:18px}
+.about-mobile-book{display:none}
+.about-hero-photo{width:100%;height:570px;object-fit:cover;object-position:center 46%}
+.about-hero-floral{position:absolute;z-index:3;left:-12px;top:-22px;height:625px;width:auto;max-width:none;object-fit:contain;filter:drop-shadow(9px 12px 9px #554a3d30);pointer-events:none}
+
+.about-intro{background:#f3eee6;padding:88px 30px 90px;text-align:center}
+.about-intro h2{margin:16px auto 24px}
+.about-intro p:not(.eyebrow){max-width:850px;margin:0 auto 14px;color:#736b64;font-size:1.04rem;line-height:1.7}
+
+.about-perspective{background:#fffdfa;padding:88px 42px 95px}
+.about-section-heading{text-align:center}
+.about-section-heading h2{margin:16px auto 19px}
+.about-section-heading>p:not(.eyebrow){max-width:720px;margin:0 auto 45px;color:#736b64;line-height:1.65}
+.about-perspective-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:1120px;margin:0 auto}
+.about-perspective-grid article{min-width:0;min-height:280px;padding:27px 28px 32px;background:#fbf8f3;border-top:2px solid #ab8955;text-align:center}
+.about-perspective-grid img{width:68px;height:68px;object-fit:contain;margin:0 auto 15px}
+.about-perspective-grid h3{margin:0 0 15px}
+.about-perspective-grid p{margin:0;color:#736b64;font-size:.91rem;line-height:1.67}
+.about-perspective-bottom{text-align:center;margin:34px 0 0}
+.about-text-link{display:inline-block;padding-bottom:4px;border-bottom:1px solid #927143;color:#927143;font-size:.7rem;font-weight:700;letter-spacing:.11em;text-decoration:none;text-transform:uppercase}
+.about-text-link:hover{color:#6f5435}
+
+.about-photo-story{display:grid;grid-template-columns:40% 60%;background:#efe8df}
+.about-photo-story>img{width:100%;height:560px;object-fit:cover;object-position:center top}
+.about-photo-story-copy{align-self:center;max-width:680px;padding:65px clamp(42px,6vw,90px)}
+.about-photo-story-copy h2{margin:15px 0 20px;font-size:clamp(2.3rem,3.2vw,3.15rem)}
+.about-photo-story-copy p:not(.eyebrow){margin-bottom:18px;color:#736b64;line-height:1.75}
+
+.about-haircare{background:#fffdfa;padding:88px 42px 95px;text-align:center}
+.about-haircare h2{margin:16px auto 19px}
+.about-haircare-lead{max-width:780px;margin:0 auto 42px;color:#736b64;line-height:1.7}
+.about-product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;max-width:1110px;margin:0 auto}
+.about-product-grid figure{min-width:0;margin:0;background:#f5f0e9}
+.about-product-grid img{width:100%;height:295px;object-fit:cover}
+.about-product-grid figcaption{padding:15px 8px;color:#493a33;font:1.25rem/1.25 'Playfair Display',Georgia,serif}
+.about-brands{margin:27px auto 0;color:#91724d;font-size:.8rem;letter-spacing:.06em}
+
+.about-visit{position:relative;z-index:2;isolation:isolate;background:#eee5d9;padding:58px 155px;text-align:center;overflow:visible}
+.about-visit-content{position:relative;z-index:2}
+.about-visit h2{margin:14px auto 19px}
+.about-visit p:not(.eyebrow){margin-bottom:22px;color:#736b64}
+.about-visit address{margin:0 auto 24px;font-style:normal;color:#514740}
+.about-visit-floral{position:absolute;z-index:1;right:-5px;top:-55px;width:420px;height:auto;max-width:none;transform:scaleX(-1);filter:drop-shadow(-9px 10px 8px #554a3d30);pointer-events:none}
+.about-page .site-footer{background:#fbf9f5}
+.about-page .footer-column h2{font-size:1rem}
+.about-page .footer-contact p,.about-page .footer-hours dl,.about-page .footer-bottom{font-size:.88rem}
+
+@media(min-width:761px){
+  .about-hero-copy{transform:translateY(26px)}
+}
+@media(min-width:1100px){
+  .about-page .brand{flex-basis:220px;width:220px;height:186px}
+  .about-page .brand-logo{width:220px}
+}
+@media(max-width:1100px){
+  .about-hero-copy{padding-left:clamp(105px,14vw,165px);padding-right:35px}
+  .about-hero-floral{height:560px;top:5px;left:-35px}
+  .about-hero-copy h1{font-size:clamp(2.7rem,5vw,4rem)}
+  .about-photo-story-copy{padding:55px 45px}
+}
+@media(max-width:1050px){
+  .about-page .brand{flex-basis:165px;width:165px;height:128px}
+  .about-page .brand-logo{width:165px}
+}
+@media(max-width:760px){
+  .about-page .header-inner{height:120px;gap:12px}
+  .about-page .brand{align-self:center;flex:0 0 140px;width:140px;height:118px;overflow:hidden}
+  .about-page .brand-logo{width:140px;height:118px;max-width:none;object-fit:contain}
+  .about-hero{display:flex;flex-direction:column;min-height:0}
+  .about-hero-photo{order:0;height:330px;object-position:center 45%}
+  .about-hero-copy{order:1;padding:55px 26px 60px 86px}
+  .about-hero-copy h1{font-size:clamp(2.65rem,8.7vw,3.55rem);margin:16px 0 18px}
+  .about-hero-copy>p:not(.eyebrow){font-size:.98rem}
+  .about-hero-copy .button{margin-top:9px}
+  .about-team-link{display:none}
+  .about-mobile-book{display:inline-flex}
+  .about-hero-floral{left:-62px;top:305px;height:385px}
+  .about-intro{padding:65px 22px}
+  .about-intro h2{font-size:clamp(2.2rem,7vw,3.2rem)}
+  .about-intro p:not(.eyebrow){font-size:.95rem}
+  .about-perspective{padding:67px 20px 70px}
+  .about-section-heading h2{font-size:clamp(2.25rem,7vw,3.15rem)}
+  .about-section-heading>p:not(.eyebrow){margin-bottom:34px;font-size:.95rem}
+  .about-perspective-grid{grid-template-columns:1fr;gap:12px;max-width:580px}
+  .about-perspective-grid article{min-height:0;padding:25px 26px 29px}
+  .about-perspective-grid img{width:60px;height:60px}
+  .about-photo-story{grid-template-columns:1fr}
+  .about-photo-story>img{height:auto}
+  .about-photo-story-copy{max-width:none;padding:53px 26px 62px}
+  .about-photo-story-copy h2{font-size:clamp(2.2rem,7vw,3.1rem)}
+  .about-haircare{padding:68px 18px}
+  .about-haircare h2{font-size:clamp(2.2rem,7vw,3.1rem)}
+  .about-haircare-lead{font-size:.95rem}
+  .about-product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .about-product-grid figure:last-child{grid-column:1/-1}
+  .about-product-grid img{height:185px}
+  .about-product-grid figure:last-child img{height:225px}
+  .about-product-grid figcaption{padding:11px 4px;font-size:1.05rem}
+  .about-visit{padding:52px 30px}
+  .about-visit h2{font-size:clamp(2.2rem,7vw,3.1rem)}
+  .about-visit-floral{right:-5px;top:-20px;width:260px;height:auto;opacity:1}
+}
+@media(max-width:480px){
+  .about-hero-copy{padding-left:83px;padding-right:23px}
+  .about-hero-floral{left:-62px;height:360px;top:312px}
+  .about-visit{padding-left:26px;padding-right:26px}
+  .about-visit-floral{right:-5px;width:260px}
+}
