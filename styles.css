@@ -216,6 +216,7 @@
 }
 
 /* Phone layout. Desktop rules above remain unchanged. */
+.phone-line-break{display:none}
 @media(max-width:760px){
   .header-inner{height:120px;gap:12px}
   .brand{align-self:center;flex:0 0 140px;width:140px;height:118px;overflow:hidden}
@@ -268,4 +269,8 @@
   .footer-column h2{font-size:1.04rem;white-space:normal}
   .footer-contact p,.footer-hours dl,.footer-policy p{font-size:1rem}
   .footer-bottom{font-size:1rem;line-height:1.5}
+}
+@media(max-width:600px){
+  .phone-line-break{display:inline}
+  .floral-hero{opacity:.28}
 }
