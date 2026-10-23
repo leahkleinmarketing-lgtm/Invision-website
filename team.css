@@ -46,6 +46,7 @@
   .team-footer-floral{height:430px;top:-155px;right:0;opacity:.35}
 }
 @media(max-width:760px){
+  .team-page .site-header{z-index:30}
   .team-hero{min-height:380px}
   .team-hero-copy{padding:86px 22px 59px 92px}
   .team-hero h1{font-size:clamp(2.75rem,10vw,3.6rem);margin:15px 0 17px}
