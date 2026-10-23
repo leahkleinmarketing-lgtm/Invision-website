@@ -124,5 +124,5 @@
   .about-visit{padding:34px 26px 52px;text-align:left}
   .about-visit-intro{max-width:calc(100% - clamp(103px,29vw,128px));min-height:clamp(185px,49vw,220px)}
   .about-visit-intro .eyebrow{letter-spacing:.16em}
-  .about-visit-floral{right:0;top:16px;width:clamp(115px,33vw,150px)}
+  .about-visit-floral{right:0;top:-6px;width:clamp(145px,40vw,160px)}
 }
