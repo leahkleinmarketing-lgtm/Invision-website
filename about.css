@@ -121,6 +121,8 @@
 @media(max-width:480px){
   .about-hero-copy{padding-left:83px;padding-right:23px}
   .about-hero-floral{left:-62px;height:360px;top:312px}
-  .about-visit{padding:clamp(270px,77vw,335px) 26px 52px}
-  .about-visit-floral{right:0;top:-10px;width:clamp(170px,50vw,210px)}
+  .about-visit{padding:34px 26px 52px;text-align:left}
+  .about-visit-intro{max-width:calc(100% - clamp(103px,29vw,128px));min-height:clamp(185px,49vw,220px)}
+  .about-visit-intro .eyebrow{letter-spacing:.16em}
+  .about-visit-floral{right:0;top:16px;width:clamp(115px,33vw,150px)}
 }
