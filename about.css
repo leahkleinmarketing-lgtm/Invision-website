@@ -121,6 +121,6 @@
 @media(max-width:480px){
   .about-hero-copy{padding-left:83px;padding-right:23px}
   .about-hero-floral{left:-62px;height:360px;top:312px}
-  .about-visit{padding-left:26px;padding-right:26px}
-  .about-visit-floral{right:-5px;width:260px}
+  .about-visit{padding:clamp(270px,77vw,335px) 26px 52px}
+  .about-visit-floral{right:0;top:-10px;width:clamp(170px,50vw,210px)}
 }
