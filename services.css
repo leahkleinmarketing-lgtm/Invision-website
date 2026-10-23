@@ -85,7 +85,9 @@
   .services-menu-callout h2{font-size:clamp(2.15rem,8vw,2.6rem);line-height:1.08}
   .services-callout-copy>p:not(.eyebrow){font-size:.94rem;line-height:1.55}
   .services-visit{padding:70px 24px}
-  .services-footer-floral{height:380px;top:-30px;right:0;opacity:.5}
+  .services-footer-floral{height:340px;top:-70px;right:0;opacity:1}
+  .services-page .footer-contact address{max-width:calc(100% - 120px)}
+  .services-page .footer-hours{margin-top:35px}
   .services-dialog-head{flex-wrap:wrap}
   .services-dialog-head h2{width:100%;font-size:1.35rem}
   .services-dialog-head a{margin-left:0}
