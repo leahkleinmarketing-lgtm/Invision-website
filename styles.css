@@ -272,5 +272,5 @@
 }
 @media(max-width:600px){
   .phone-line-break{display:inline}
-  .floral-hero{opacity:.28}
+  .floral-hero{right:-30px;opacity:1}
 }
