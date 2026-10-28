@@ -26,3 +26,20 @@ nav.addEventListener('click', event => {
     nav.classList.remove('open');
   }
 });
+
+const servicesNav = nav.querySelector('.nav-services');
+const servicesToggle = servicesNav?.querySelector('.nav-services-toggle');
+if (servicesToggle) {
+  const closeServicesMenu = () => {
+    servicesToggle.setAttribute('aria-expanded', 'false');
+    servicesNav.classList.remove('is-open');
+  };
+  servicesToggle.addEventListener('click', () => {
+    const open = servicesToggle.getAttribute('aria-expanded') !== 'true';
+    servicesToggle.setAttribute('aria-expanded', String(open));
+    servicesNav.classList.toggle('is-open', open);
+  });
+  document.addEventListener('click', event => {
+    if (!servicesNav.contains(event.target)) closeServicesMenu();
+  });
+}

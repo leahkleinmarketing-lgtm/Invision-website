@@ -22,7 +22,14 @@
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="services.html">Services</a>
+        <div class="nav-services">
+          <a href="/services">Services</a>
+          <button class="nav-services-toggle" type="button" aria-label="Show Services links" aria-expanded="false" aria-controls="services-submenu"><span aria-hidden="true">⌄</span></button>
+          <div class="nav-submenu" id="services-submenu">
+            <a href="/services">Services Overview</a>
+            <a href="/pricing">Pricing</a>
+          </div>
+        </div>
         <a class="active" href="team.html" aria-current="page">Team</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>

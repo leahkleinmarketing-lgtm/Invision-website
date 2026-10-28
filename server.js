@@ -4,7 +4,7 @@ const path = require('node:path');
 
 const root = __dirname;
 const port = Number(process.env.PORT || 4173);
-const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.png': 'image/png', '.jpg': 'image/jpeg' };
+const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.xml': 'application/xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp' };
 
 http.createServer((request, response) => {
   const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
@@ -12,7 +12,8 @@ http.createServer((request, response) => {
     response.writeHead(404).end('Not found');
     return;
   }
-  const file = path.resolve(root, '.' + (pathname === '/' ? '/index.html' : pathname));
+  const requested = pathname === '/' ? '/index.html' : pathname;
+  const file = path.resolve(root, '.' + (path.extname(requested) ? requested : requested + '.html'));
   if (!file.startsWith(root + path.sep) && file !== path.join(root, 'index.html')) {
     response.writeHead(403).end();
     return;

@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="about.css?v=12">
   <link rel="stylesheet" href="services.css?v=3">
   <script src="main.js" defer></script>
-  <script src="services.js" defer></script>
 </head>
 <body class="about-page services-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -24,7 +23,14 @@
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a class="active" href="services.html" aria-current="page">Services</a>
+        <div class="nav-services">
+          <a href="/services" class="active" aria-current="page">Services</a>
+          <button class="nav-services-toggle" type="button" aria-label="Show Services links" aria-expanded="false" aria-controls="services-submenu"><span aria-hidden="true">⌄</span></button>
+          <div class="nav-submenu" id="services-submenu">
+            <a href="/services">Services Overview</a>
+            <a href="/pricing">Pricing</a>
+          </div>
+        </div>
         <a href="team.html">Team</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
@@ -33,7 +39,7 @@
     </div>
   </header>
   <main id="main">
-    <section class="services-hero"><div class="services-hero-copy"><p class="eyebrow">Hair services in St. Johns, FL</p><h1>Beautiful hair, <em>made for your life.</em></h1><p class="services-lead">From a simple root refresh to a new color, cut, or style, we shape every appointment around your hair and the way you wear it.</p><div class="services-hero-actions"><button class="button services-menu-open" type="button">View services &amp; pricing</button><a class="services-text-link" href="https://www.joinblvd.com/b/invisionhairdesign/widget#/visit-type">Book an appointment</a></div></div><div class="services-hero-visual"><img class="services-hero-photo" width="1602" height="982" fetchpriority="high" src="Assets/services-hero-blonde.webp" alt="Woman with dimensional blonde highlights and soft waves at Invision Hair Design."></div><img class="services-hero-floral" width="1024" height="1536" src="Assets/in-vision-soft-floral-edge.png" alt="" aria-hidden="true"></section>
+    <section class="services-hero"><div class="services-hero-copy"><p class="eyebrow">Hair services in St. Johns, FL</p><h1>Beautiful hair, <em>made for your life.</em></h1><p class="services-lead">From a simple root refresh to a new color, cut, or style, we shape every appointment around your hair and the way you wear it.</p><div class="services-hero-actions"><a class="button" href="/pricing">View services &amp; pricing</a><a class="services-text-link" href="https://www.joinblvd.com/b/invisionhairdesign/widget#/visit-type">Book an appointment</a></div></div><div class="services-hero-visual"><img class="services-hero-photo" width="1602" height="982" fetchpriority="high" src="Assets/services-hero-blonde.webp" alt="Woman with dimensional blonde highlights and soft waves at Invision Hair Design."></div><img class="services-hero-floral" width="1024" height="1536" src="Assets/in-vision-soft-floral-edge.png" alt="" aria-hidden="true"></section>
     <section class="services-heading"><p class="eyebrow">Explore our services</p><h2>Color, shape, and everything in between.</h2><p>Discover the services clients come to In Vision Hair Design for in St. Johns, Florida.</p></section>
     <div class="services-list">
       <section class="services-row"><div class="services-photo"><img loading="lazy" decoding="async" src="Assets/color-brunette-salon.jpg" alt="Illustrative image of a woman with glossy brunette hair color in a salon"></div><div class="services-copy"><span class="services-number">01 / COLOR</span><h3>Root touch-ups &amp; custom color</h3><p>Keep your favorite shade fresh with a root touch-up, or explore a new direction with all-over color. We also offer gray blending, gloss and toner services, with choices guided by your hair and upkeep goals.</p><p class="services-tags">Root color · All-over color · Gloss &amp; toner</p></div></section>
@@ -44,7 +50,7 @@
       <section class="services-row services-reverse"><div class="services-photo"><img loading="lazy" decoding="async" src="Assets/k-tip-extensions.webp" alt="Professional K-tip keratin hair extensions being applied at Invision Hair Design."></div><div class="services-copy"><span class="services-number">06 / LENGTH &amp; FULLNESS</span><h3>Hair extensions</h3><p>Interested in more length or fullness? Ask our team about extension options and a consultation to explore a look that works with your hair.</p><p class="services-tags">Length · Fullness · Consultation</p></div></section>
       <section class="services-row"><div class="services-photo"><img loading="lazy" decoding="async" src="Assets/treatment-salon.jpg" alt="Illustrative image of a conditioning hair treatment being combed through in a salon"></div><div class="services-copy"><span class="services-number">07 / HAIRCARE</span><h3>Treatments &amp; care</h3><p>Deep conditioning, Olaplex, and smoothing treatments give us options to support the look and feel of your hair. We will help you choose care that fits your goals.</p><p class="services-tags">Deep conditioning · Olaplex · Smoothing</p></div></section>
     </div>
-    <section class="services-menu-callout"><div class="services-callout-copy"><p class="eyebrow">The full service menu</p><h2>See every service and price in one place.</h2><p>Browse the salon’s complete menu, including color and cut combinations. Your stylist can help you choose the right service for your hair.</p><button class="button services-menu-open" type="button">View services &amp; pricing</button></div><div class="services-menu-art"><img class="services-chair" src="Assets/enhanced-photos/salon-chairs.png" loading="lazy" alt="Warm styling chairs and floral decor inside In Vision Hair Design"></div></section>
+    <section class="services-menu-callout"><div class="services-callout-copy"><p class="eyebrow">The full service menu</p><h2>See every service and price in one place.</h2><p>Browse the salon’s complete menu, including color and cut combinations. Your stylist can help you choose the right service for your hair.</p><a class="button" href="/pricing">View services &amp; pricing</a></div><div class="services-menu-art"><img class="services-chair" src="Assets/enhanced-photos/salon-chairs.png" loading="lazy" alt="Warm styling chairs and floral decor inside In Vision Hair Design"></div></section>
     <section class="services-visit"><p class="eyebrow">Visit us in St. Johns</p><h2>Ready to plan your next look?</h2><p>We would love to welcome you to In Vision Hair Design.</p><address>4125 Race Track Rd, Suite 110 · St. Johns, FL 32259</address><a class="button" href="https://www.joinblvd.com/b/invisionhairdesign/widget#/visit-type">Book an appointment</a></section>
   </main>
   <footer class="site-footer">
@@ -83,9 +89,5 @@
       </div>
     </div>
   </footer>
-  <dialog class="services-pricing-dialog" id="price-menu" aria-labelledby="price-menu-title">
-    <div class="services-dialog-head"><h2 id="price-menu-title">Services &amp; pricing</h2><a href="Assets/service-menu.PNG" target="_blank" rel="noopener">Open full-size menu</a><button type="button" id="menu-close" aria-label="Close pricing menu">Close</button></div>
-    <div class="services-dialog-image"><img src="Assets/service-menu.PNG" alt="Complete In Vision Hair Design service menu and price sheet" width="977" height="1610"></div>
-  </dialog>
 </body>
 </html>

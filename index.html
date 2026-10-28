@@ -22,7 +22,14 @@
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
         <a class="active" href="index.html" aria-current="page">Home</a>
         <a href="about.html">About</a>
-        <a href="services.html">Services</a>
+        <div class="nav-services">
+          <a href="/services">Services</a>
+          <button class="nav-services-toggle" type="button" aria-label="Show Services links" aria-expanded="false" aria-controls="services-submenu"><span aria-hidden="true">⌄</span></button>
+          <div class="nav-submenu" id="services-submenu">
+            <a href="/services">Services Overview</a>
+            <a href="/pricing">Pricing</a>
+          </div>
+        </div>
         <a href="team.html">Team</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
@@ -53,6 +60,7 @@
           <article class="service-card"><picture><img src="Assets/mens-haircuts.webp" alt="Man with a stylish salt-and-pepper haircut at Invision Hair Design salon." width="800" height="960" loading="lazy"></picture><div><h3>Men's Haircuts</h3><p>Tailored cuts for a sharp, effortless look.</p><a href="https://www.joinblvd.com/b/invisionhairdesign/widget#/visit-type">Book This Service <span aria-hidden="true">→</span></a></div></article>
           <article class="service-card"><picture><img src="Assets/hair-styling-prom.webp" alt="Romantic half-up prom hairstyle with soft curls and blonde highlights at Invision Hair Design." width="800" height="960" loading="lazy"></picture><div><h3>Hair Styling</h3><p>Polished, effortless styles for every occasion.</p><a href="https://www.joinblvd.com/b/invisionhairdesign/widget#/visit-type">Book This Service <span aria-hidden="true">→</span></a></div></article>
         </div>
+        <div class="services-pricing-action"><a class="button" href="/pricing">View Services &amp; Pricing <span aria-hidden="true">→</span></a></div>
       </div>
     </section>
 
