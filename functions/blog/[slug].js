@@ -84,9 +84,17 @@ export async function onRequestGet({ request, env, params }) {
   const formattedDate = Number.isNaN(date.getTime()) ? '' : new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'long', day: 'numeric'}).format(date);
   const description = post.seoDescription || post.excerpt || 'Read the hair journal from In Vision Hair Design in St. Johns, Florida.';
   const cover = imageUrl(post.imageUrl);
+  const articleUrl = new URL(`/blog/${encodeURIComponent(slug)}`, request.url).href;
+  const socialImage = cover || 'https://invision-website.pages.dev/Assets/invision-social-share.jpg';
   html = html.replace('<title>Hair Journal | In Vision Hair Design</title>', `<title>${escapeHtml(post.title)} | In Vision Hair Design</title>`);
   html = html.replace('content="Read the hair journal from In Vision Hair Design in St. Johns, Florida."', `content="${escapeHtml(description)}"`);
-  html = html.replace('<head>', `<head>\n  <base href="/">\n  <link rel="canonical" href="${escapeHtml(new URL(`/blog/${encodeURIComponent(slug)}`, request.url).href)}">`);
+  html = html.replace('<meta property="og:title" content="Hair Journal | In Vision Hair Design">', `<meta property="og:title" content="${escapeHtml(post.title)} | In Vision Hair Design">`);
+  html = html.replace('<meta property="og:description" content="Read the hair journal from In Vision Hair Design in St. Johns, Florida.">', `<meta property="og:description" content="${escapeHtml(description)}">`);
+  html = html.replace('<meta property="og:url" content="https://invision-website.pages.dev/blog">', `<meta property="og:url" content="${escapeHtml(articleUrl)}">`);
+  html = html.replace('<meta property="og:type" content="website">', '<meta property="og:type" content="article">');
+  html = html.replace('<meta property="og:image" content="https://invision-website.pages.dev/Assets/invision-social-share.jpg">', `<meta property="og:image" content="${escapeHtml(socialImage)}">`);
+  html = html.replace('<meta name="twitter:image" content="https://invision-website.pages.dev/Assets/invision-social-share.jpg">', `<meta name="twitter:image" content="${escapeHtml(socialImage)}">`);
+  html = html.replace('<head>', `<head>\n  <base href="/">\n  <link rel="canonical" href="${escapeHtml(articleUrl)}">`);
   html = html.replace('id="blog-article" hidden', 'id="blog-article"');
   html = html.replace('<time id="post-date" class="blog-post-date"></time>', `<time id="post-date" class="blog-post-date" datetime="${escapeHtml(post.publishedAt)}">${escapeHtml(formattedDate)}</time>`);
   html = html.replace('<h1 id="post-title"></h1>', `<h1 id="post-title">${escapeHtml(post.title)}</h1>`);
