@@ -274,3 +274,14 @@
   .phone-line-break{display:inline}
   .floral-hero{right:-30px;opacity:1}
 }
+
+/* Five service cards share the existing card treatment at every width. */
+@media(min-width:1200px){
+  .services-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+}
+@media(min-width:761px) and (max-width:1199px){
+  .services-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+  .service-card{grid-column:span 2}
+  .service-card:nth-child(4){grid-column:2 / span 2}
+  .service-card:nth-child(5){grid-column:4 / span 2}
+}
