@@ -12,6 +12,7 @@ if (contactForm && contactStatus) {
     submitButton.disabled = true;
     contactStatus.className = 'contact-status';
     contactStatus.textContent = 'Sending your message…';
+    let sent = false;
 
     try {
       const response = await fetch(contactForm.action, {
@@ -20,6 +21,7 @@ if (contactForm && contactStatus) {
         body: JSON.stringify(payload),
       });
       if (!response.ok) throw new Error('Your message could not be sent right now. Please call us at (904) 240-9278.');
+      sent = true;
       contactForm.reset();
       contactStatus.classList.add('success');
       contactStatus.textContent = 'Thank you. Your message has been sent. We will be in touch soon.';
@@ -28,6 +30,10 @@ if (contactForm && contactStatus) {
       contactStatus.textContent = error.message || 'Your message could not be sent right now. Please call us at (904) 240-9278.';
     } finally {
       submitButton.disabled = false;
+    }
+
+    if (sent && typeof window.gtag === 'function') {
+      window.gtag('event', 'ads_conversion_Contact_Us_1');
     }
   });
 }
