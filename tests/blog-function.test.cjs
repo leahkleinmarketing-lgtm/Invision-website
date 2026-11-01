@@ -25,7 +25,9 @@ test('article route renders published Sanity content and escapes HTML', async ()
     assert.equal(response.status, 200);
     assert.match(html, /<title>Test &lt;Post&gt; \| In Vision Hair Design<\/title>/);
     assert.match(html, /Hello &lt;reader&gt;/);
-    assert.match(html, /rel="canonical"/);
+    assert.match(html, /rel="canonical" href="https:\/\/www\.invisionhairdesign\.com\/blog\/test-post"/);
+    assert.match(html, /property="og:url" content="https:\/\/www\.invisionhairdesign\.com\/blog\/test-post"/);
+    assert.equal((html.match(/rel="canonical"/g) || []).length, 1);
     assert.doesNotMatch(html, /id="blog-article" hidden/);
   } finally {
     global.fetch = originalFetch;

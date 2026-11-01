@@ -12,7 +12,7 @@ if (blogGrid && window.sanityBlog?.ready) {
       article.className = 'blog-card';
       const link = document.createElement('a');
       const localPreview = location.protocol === 'file:' || ['localhost', '127.0.0.1'].includes(location.hostname);
-      link.href = localPreview ? `blog-post.html?slug=${encodeURIComponent(post.slug)}` : `/blog/${encodeURIComponent(post.slug)}`;
+      link.href = localPreview ? `blog-post.html?slug=${encodeURIComponent(post.slug)}` : `https://www.invisionhairdesign.com/blog/${encodeURIComponent(post.slug)}`;
       const imageUrl = window.sanityBlog.imageUrl(post.imageUrl, 900);
       if (imageUrl) {
         const image = document.createElement('img');

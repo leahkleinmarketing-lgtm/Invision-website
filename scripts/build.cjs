@@ -4,7 +4,7 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const output = path.join(root, 'dist');
 const siteExtensions = new Set(['.html', '.css', '.js', '.xml']);
-const pages = fs.readdirSync(root).filter(name => siteExtensions.has(path.extname(name)));
+const pages = fs.readdirSync(root).filter(name => siteExtensions.has(path.extname(name)) || name === 'robots.txt');
 const assets = new Set();
 
 if (path.dirname(output) !== root || path.basename(output) !== 'dist') {
