@@ -5,8 +5,8 @@ window.sanityBlog = (() => {
   const apiVersion = String(config.apiVersion || '2025-02-19').trim();
   const ready = /^[a-z0-9-]+$/.test(projectId) && /^[a-z0-9_-]+$/.test(dataset) && /^\d{4}-\d{2}-\d{2}$/.test(apiVersion);
 
-  const listQuery = `*[_type == "post" && defined(slug.current) && defined(publishedAt) && publishedAt <= now()] | order(publishedAt desc) [0...30] {title, "slug": slug.current, excerpt, publishedAt, "imageUrl": coverImage.asset->url, "imageAlt": coverImage.alt}`;
-  const postQuery = `*[_type == "post" && slug.current == $slug && defined(publishedAt) && publishedAt <= now()][0] {title, "slug": slug.current, excerpt, publishedAt, seoDescription, "imageUrl": coverImage.asset->url, "imageAlt": coverImage.alt, body[]{..., _type == "image" => {"imageUrl": asset->url, alt}}}`;
+  const listQuery = `*[_type == "post" && defined(slug.current)] | order(publishedAt desc) [0...30] {title, "slug": slug.current, excerpt, publishedAt, "imageUrl": coverImage.asset->url, "imageAlt": coverImage.alt}`;
+  const postQuery = `*[_type == "post" && slug.current == $slug][0] {title, "slug": slug.current, excerpt, publishedAt, seoDescription, "imageUrl": coverImage.asset->url, "imageAlt": coverImage.alt, body[]{..., _type == "image" => {"imageUrl": asset->url, alt}}}`;
 
   async function query(groq, params = {}) {
     if (!ready) return null;
@@ -19,6 +19,14 @@ window.sanityBlog = (() => {
     if (!response.ok) throw new Error('Sanity query failed');
     const data = await response.json();
     return data.result;
+  }
+
+  async function list() {
+    if (!ready) return null;
+    if (location.protocol === 'file:' || ['localhost', '127.0.0.1'].includes(location.hostname)) return query(listQuery);
+    const response = await fetch('/api/blog', { cache: 'no-store' });
+    if (!response.ok) throw new Error('Blog list request failed');
+    return response.json();
   }
 
   function imageUrl(source, width = 900) {
@@ -38,7 +46,7 @@ window.sanityBlog = (() => {
 
   return {
     ready,
-    list: () => query(listQuery),
+    list,
     post: (slug) => query(postQuery, { slug }),
     imageUrl,
     formatDate,
