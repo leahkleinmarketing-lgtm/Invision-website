@@ -4,13 +4,20 @@ for (const review of reviewRoot ? (window.clientReviews || []) : []) {
   card.className = 'review-card';
   const stars = document.createElement('div');
   stars.className = 'review-stars';
-  stars.setAttribute('aria-label', 'Five stars shown in approved design');
-  stars.textContent = '★★★★★';
+  stars.setAttribute('aria-label', Number.isInteger(review.rating) ? `${review.rating} out of 5 stars` : 'Rating pending verification');
+  stars.textContent = Number.isInteger(review.rating) ? '★'.repeat(review.rating) : '';
   const name = document.createElement('h3');
   name.textContent = review.name;
   const quote = document.createElement('blockquote');
-  quote.textContent = `“${review.quote}”`;
+  quote.textContent = `“${review.excerpt}”`;
   card.append(stars, name, quote);
+  card.setAttribute('role', 'link');
+  card.setAttribute('tabindex', '0');
+  card.setAttribute('title', 'Read the full review on Google');
+  card.addEventListener('click', () => window.open(review.url, '_blank', 'noopener,noreferrer'));
+  card.addEventListener('keydown', event => {
+    if (event.key === 'Enter') window.open(review.url, '_blank', 'noopener,noreferrer');
+  });
   reviewRoot.append(card);
 }
 const menu = document.querySelector('.menu-toggle');
