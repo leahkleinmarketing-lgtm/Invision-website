@@ -2,7 +2,7 @@ const blogGrid = document.querySelector('#blog-posts');
 const blogEmpty = document.querySelector('#blog-empty');
 const blogError = document.querySelector('#blog-error');
 
-if (blogGrid && window.sanityBlog?.ready) {
+if (blogGrid && !blogGrid.children.length && window.sanityBlog?.ready) {
   window.sanityBlog.list().then((posts) => {
     if (!Array.isArray(posts) || posts.length === 0) return;
     blogEmpty.hidden = true;

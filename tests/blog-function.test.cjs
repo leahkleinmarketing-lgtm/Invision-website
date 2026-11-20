@@ -30,6 +30,8 @@ test('article route renders published Sanity content and escapes HTML', async ()
     assert.match(html, /Hello &lt;reader&gt;/);
     assert.match(html, /rel="canonical" href="https:\/\/www\.invisionhairdesign\.com\/blog\/test-post"/);
     assert.match(html, /property="og:url" content="https:\/\/www\.invisionhairdesign\.com\/blog\/test-post"/);
+    assert.match(html, /name="description" content="A short summary"/);
+    assert.match(html, /name="robots" content="index, follow"/);
     assert.equal((html.match(/rel="canonical"/g) || []).length, 1);
     assert.doesNotMatch(html, /id="blog-article" hidden/);
   } finally {

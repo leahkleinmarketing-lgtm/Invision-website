@@ -86,6 +86,7 @@ export async function onRequestGet({ request, env, params }) {
   const articleUrl = `https://www.invisionhairdesign.com/blog/${encodeURIComponent(slug)}`;
   const socialImage = cover || 'https://www.invisionhairdesign.com/Assets/invision-social-share.jpg';
   html = html.replace('<title>Hair Journal | In Vision Hair Design</title>', `<title>${escapeHtml(post.title)} | In Vision Hair Design</title>`);
+  html = html.replace('<meta name="robots" content="noindex, follow">', '<meta name="robots" content="index, follow">');
   html = html.replace('content="Read the hair journal from In Vision Hair Design in St. Johns, Florida."', `content="${escapeHtml(description)}"`);
   html = html.replace('<meta property="og:title" content="Hair Journal | In Vision Hair Design">', `<meta property="og:title" content="${escapeHtml(post.title)} | In Vision Hair Design">`);
   html = html.replace('<meta property="og:description" content="Read the hair journal from In Vision Hair Design in St. Johns, Florida.">', `<meta property="og:description" content="${escapeHtml(description)}">`);
